@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+a {
+  text-align: center;
+}
+textarea {
+  resize: none;
+  letter-spacing: 1px;
+  padding: 10px;
+  max-width: 100%;
+  /* line-height: 1.5; */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+.h3-align {
+  display: flex;
+  justify-content: space-around;
+  height: 20px;
+}
+.h4-align {
+  display: flex;
+  justify-content: space-around;
+  /* height: 50px; */
+}
+/* .inline-div1 {
+  display: inline-block;
+  text-align: left;
+} */
+.textarea-align {
+  /* display: inline-block;
+  text-align: right; */
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Public-key Cryptosystems</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Attack Key Exchange Protocol</h1>
+    <form method="POST" style="text-align: center">
+      <select name="sender" id="sender">
+        <option value="Alice" selected>Alice</option>
+      </select>
+      <select name="attacker" id="attacker">
+        <option value="Malice" selected>Malice</option>
+      </select>
+      <select name="receiver" id="receiver">
+        <option value="Bob" selected>Bob</option>
+      </select>
+      <br />
+      <input type="submit" name="form2" value="Begin" />
+    </form>
+    <div class="h3-align">
+      <h3>Protocol exchange between Alice and Malice</h3>
+      <h3>Protocol exchange between Malice(Alice) and Bob</h3>
+    </div>
+    <div class="h4-align">
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %}
+      <h4>{{ message }}</h4>
+      {% endfor %} {% endif %} {% endwith %}
+    </div>
+
+    <div class="textarea-align">
+      <textarea rows="30" cols="100" readonly>
+        {% for message in log1 %}
+        {{message}}
+        {% endfor %}
+         </textarea
+      >
+      <textarea rows="30" cols="100" readonly>
+        {% for message in log2 %}
+        {{message}}
+        {% endfor %}
+         </textarea
+      >
+    </div>
+    <br />
+    <br />
+    <div align="center">
+      <a href="{{ url_for('home')}}">Click here return Normal Demo</a>
+    </div>
+  </body>
+</html>
